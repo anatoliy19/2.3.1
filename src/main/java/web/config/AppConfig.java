@@ -70,5 +70,4 @@ public class AppConfig {
         props.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
         return props;
     }
-
 }

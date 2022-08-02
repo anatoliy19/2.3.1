@@ -12,12 +12,10 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
 
-    @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
 
-    @Transactional
     @Override
     public List<User> getAllUsers() {
         return userDao.getAllUsers();
@@ -29,7 +27,6 @@ public class UserServiceImpl implements UserService {
         userDao.addUser(user);
     }
 
-    @Transactional
     @Override
     public User getById(Long id) {
         return userDao.getById(id);
